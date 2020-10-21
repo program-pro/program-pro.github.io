@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input {
+  width: 75%;
+}
+</style>
+</head>
+<body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+Host <input id="host" value="" type="text"><br>Website that sent this
+Username <input id="username" value="" type="text"><br>Username
+Password <input id="password" value="" type="text"><br>Password
+To <input id="to" value="" type="text"><br>Email to send to
+From <input id="from" value="" type="text"><br>Email ro send from
+Subject <input id="subject" value="" type="text"><br>Subject of email
+Body <input id="body" value="" type="text"><br>Content of email
+<input id="button" type="submit" value="" onClick="sendEmail();"><b>Send your email
+<script>
+function sendEmail() {
+  var host = document.getElementById("host").value
+  var username = document.getElementById("username").value
+  var password = document.getElementById("password").value
+  var to = document.getElementById("to").value
+  var from = document.getElementById("from").value
+  var subject = document.getElementById("subject").value
+  var body = document.getElementById("body").value
+  Email.send({
+      Host : host,
+      Username : username,
+      Password : password,
+      To : to,
+      From : from,
+      Subject : subject,
+      Body : body
+  }).then(
+    message => alert(message)
+  );
+}
+</script>
+</body>
