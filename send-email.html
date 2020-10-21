@@ -6,17 +6,18 @@ input {
   width: 75%;
 }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-Host <input id="host" value="" type="text"><br>Website that sent this
-Username <input id="username" value="" type="text"><br>Username
-Password <input id="password" value="" type="text"><br>Password
-To <input id="to" value="" type="text"><br>Email to send to
-From <input id="from" value="" type="text"><br>Email ro send from
-Subject <input id="subject" value="" type="text"><br>Subject of email
-Body <input id="body" value="" type="text"><br>Content of email
-<input id="button" type="submit" value="" onClick="sendEmail();"><b>Send your email
+Host <input id="host" value="" type="text">Website that sent this<br>
+Username <input id="username" value="" type="text">Username<br>
+Password <input id="password" value="" type="text">Password<br>
+To <input id="to" value="" type="text">Email to send to<br>
+From <input id="from" value="" type="text">Email ro send from<br>
+Subject <input id="subject" value="" type="text">Subject of email<br>
+Body <input id="body" value="" type="text">Content of email<br>
+<input id="button" type="submit" value="" onClick="sendEmail();">Send your email
 <script>
 function sendEmail() {
   var host = document.getElementById("host").value
